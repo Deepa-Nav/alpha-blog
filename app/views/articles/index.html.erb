@@ -24,8 +24,8 @@
                     <%= link_to 'Edit' , edit_article_path(article.id) %>
                 </td>
                 <td>
-                    <%= link_to 'Delete' , article_path(article.id), method: :delete, data: {confirm: "Are you sure?" }
-                        %>
+                    <%= link_to "Destroy" , article_path(article.id), data: { turbo_method: :delete,
+                        turbo_confirm: "Are you sure?" } %>
                 </td>
             </tr>
             <%end%>
